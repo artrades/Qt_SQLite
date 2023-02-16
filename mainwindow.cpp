@@ -38,3 +38,16 @@ void MainWindow::on_listWidget_doubleClicked(const QModelIndex &index)
     model->select();
 }
 
+
+void MainWindow::on_btnAdd_clicked()
+{
+    model->insertRow(model->rowCount());
+}
+
+
+void MainWindow::on_btnRemove_clicked()
+{
+    model->removeRow(ui->tableView->currentIndex().row());
+    model->select();
+}
+
